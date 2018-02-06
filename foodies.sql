@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 05-02-2018 a las 07:46:57
+-- Tiempo de generación: 06-02-2018 a las 14:01:56
 -- Versión del servidor: 5.6.36
 -- Versión de PHP: 5.6.31
 
@@ -247,10 +247,10 @@ INSERT INTO `usuario` (`id`, `nombre`, `primer_apellido`, `segundo_apellido`, `t
 (13, 'Nicolas', 'Blanco', 'Carrero', NULL, NULL, 'niblaca@gmail.com', NULL, 'nico', 'b18aaa6c6b929b866051b69a785a6cdce5bdd564d41be247c7d5ef7c2e2e2271', 0, NULL, NULL, NULL, 2, 3),
 (14, 'David', 'Gonzalez', 'Molina', NULL, NULL, 'dagomo@gmail.com', NULL, 'david', '07d046d5fac12b3f82daf5035b9aae86db5adc8275ebfbf05ec83005a4a8ba3e', 0, NULL, NULL, NULL, 2, 3),
 (15, 'Maria', 'Talgo', 'Mendoza', NULL, NULL, 'matame@gmail.com', NULL, 'maria', '94aec9fbed989ece189a7e172c9cf41669050495152bc4c1dbf2a38d7fd85627', 0, NULL, NULL, NULL, 2, 4),
-(16, 'Marcos', 'Gimenez', 'Terol', '623814557', 'Calle de Carolina Alvarez, 5', 'magite@gmail.com', '46023', 'marcos', '43f1efecd33031b0ccd142b1c5cccc44ea19ad3e7a947965c5b0c16a632b5d7b', NULL, NULL, 1, 1, 3, NULL),
-(17, 'Eugenio', 'Albatros', 'Diaz', '623159585', 'Calle del Poeta Mas y Ros, 10', 'eualdi@gmail.com', '46021', 'eugen', 'd39cd0d270bb9906479b95fee209adf872bbc382db5ae42c45ff367451d1d473', NULL, NULL, 1, 1, 3, NULL),
-(18, 'Estefania', 'Lopez', 'Lopez', '621459563', 'Calle de la Noguera, 17', 'eslolo@gmail.com', '46023', 'fani', 'ec694d969ed12d52b9ad1866d62ae95988845dc2176e3f661039442b071ca219', NULL, NULL, 1, 1, 3, NULL),
-(19, 'Beatriz', 'Alcantara', 'Ballester', '622986532', 'Avenida de Francia, 15', 'bealba@gmail.com', '46023', 'bea', 'b6e1557a1ed3900d7be8e28bb5f137d91812f31e59a90ceddac0276bc532d18e', NULL, NULL, 1, 1, 3, NULL);
+(16, 'Marcos', 'Gimenez', 'Terol', '623814557', 'Calle de Carolina Alvarez, 5', 'magite@gmail.com', '46023', 'marcos', '43f1efecd33031b0ccd142b1c5cccc44ea19ad3e7a947965c5b0c16a632b5d7b', NULL, NULL, 1, 1, 3, 3),
+(17, 'Eugenio', 'Albatros', 'Diaz', '623159585', 'Calle del Poeta Mas y Ros, 10', 'eualdi@gmail.com', '46021', 'eugen', 'd39cd0d270bb9906479b95fee209adf872bbc382db5ae42c45ff367451d1d473', NULL, NULL, 1, 1, 3, 4),
+(18, 'Estefania', 'Lopez', 'Lopez', '621459563', 'Calle de la Noguera, 17', 'eslolo@gmail.com', '46023', 'fani', 'ec694d969ed12d52b9ad1866d62ae95988845dc2176e3f661039442b071ca219', NULL, NULL, 1, 1, 3, 1),
+(19, 'Beatriz', 'Alcantara', 'Ballester', '622986532', 'Avenida de Francia, 15', 'bealba@gmail.com', '46023', 'bea', 'b6e1557a1ed3900d7be8e28bb5f137d91812f31e59a90ceddac0276bc532d18e', NULL, NULL, 1, 1, 3, 3);
 
 --
 -- Índices para tablas volcadas
