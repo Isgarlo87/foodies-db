@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 12-02-2018 a las 00:56:11
+-- Tiempo de generación: 12-02-2018 a las 07:28:33
 -- Versión del servidor: 5.6.36
 -- Versión de PHP: 5.6.31
 
@@ -31,6 +31,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `extras` (
   `id` int(11) NOT NULL,
   `descripcion` varchar(45) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `imagen` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `precio` double NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -38,12 +39,13 @@ CREATE TABLE `extras` (
 -- Volcado de datos para la tabla `extras`
 --
 
-INSERT INTO `extras` (`id`, `descripcion`, `precio`) VALUES
-(1, 'Sin extras', 0),
-(2, 'Doble ración de patatas', 2.5),
-(3, 'Alitas de pollo', 5),
-(4, 'Tarrina de helado', 3.5),
-(5, 'Nuggets de pollo', 3.25);
+INSERT INTO `extras` (`id`, `descripcion`, `imagen`, `precio`) VALUES
+(1, 'Sin extras', 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Ic_dnd_forwardslash_48px.svg/1024px-Ic_dnd_forwardslash_48px.svg.png', 0),
+(2, 'Doble ración de patatas', 'https://www.lagrosella.es/wp-content/uploads/2016/04/patatas-fritas-1-600x533.jpg', 2.5),
+(3, 'Alitas de pollo', 'https://www.recetin.com/wp-content/uploads/2015/06/alas_pollo.jpg', 5),
+(4, 'Tarrina de helado', 'https://media-cdn.tripadvisor.com/media/photo-s/03/0d/cb/2e/potao-da-oficina-do-sorvete.jpg', 3.5),
+(5, 'Nuggets de pollo', 'https://cdn-a.william-reed.com/var/wrbm_gb_food_pharma/storage/images/1/1/0/6/2416011-1-eng-GB/Marel-partners-Dutch-Protein-Services-to-offer-crispy-products.jpg', 3.25),
+(6, 'Bebida o Refresco', 'http://www.risco.ro/uploads/cms/25-6114.jpg', 1.95);
 
 -- --------------------------------------------------------
 
@@ -328,7 +330,7 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de la tabla `extras`
 --
 ALTER TABLE `extras`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT de la tabla `lineapedido`
 --
