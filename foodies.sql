@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 06-02-2018 a las 14:01:56
+-- Tiempo de generación: 12-02-2018 a las 00:44:02
 -- Versión del servidor: 5.6.36
 -- Versión de PHP: 5.6.31
 
@@ -95,6 +95,7 @@ INSERT INTO `pedido` (`id`, `fecha_pedido`, `id_tienda`, `id_usuario`) VALUES
 CREATE TABLE `plato` (
   `id` int(11) NOT NULL,
   `descripcion` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `imagen` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `existencias` int(11) NOT NULL,
   `precio` double NOT NULL,
   `id_tipoplato` int(11) NOT NULL,
@@ -105,17 +106,17 @@ CREATE TABLE `plato` (
 -- Volcado de datos para la tabla `plato`
 --
 
-INSERT INTO `plato` (`id`, `descripcion`, `existencias`, `precio`, `id_tipoplato`, `id_extras`) VALUES
-(1, 'Hamburguesa de pollo', 50, 6.5, 1, 1),
-(2, 'Filete de ternera', 35, 10.95, 1, 1),
-(3, 'Salmón ahumado', 20, 12.95, 2, 1),
-(4, 'Bacalao al pilpil', 23, 11.5, 2, 1),
-(5, 'Espaguetis a la carbonara', 60, 7.95, 3, 1),
-(6, 'Ñoquis con tomate', 33, 6.5, 3, 1),
-(7, 'Arroz tres delicias', 94, 4.95, 4, 1),
-(8, 'Arroz al horno', 88, 4.95, 4, 1),
-(9, 'Ensalada cesar', 22, 8.95, 5, 1),
-(10, 'Ensalada mediterranea', 19, 6.95, 5, 1);
+INSERT INTO `plato` (`id`, `descripcion`, `imagen`, `existencias`, `precio`, `id_tipoplato`, `id_extras`) VALUES
+(1, 'Hamburguesa de pollo', 'http://jarris.co/wp-content/uploads/2015/11/HAMBURGUESA-DE-POLLO-jarris.png', 50, 6.5, 1, 1),
+(2, 'Filete de ternera', 'https://img.recetascomidas.com/recetas/640_480/filete-de-ternera-a-la-parrilla.jpg', 35, 10.95, 1, 1),
+(3, 'Salmón ahumado', 'https://www.recetin.com/wp-content/uploads/2011/01/salmon-ahumado.jpg', 20, 12.95, 2, 1),
+(4, 'Bacalao al pilpil', 'https://www.miscosillasdecocina.com/wp-content/uploads/2014/02/bacalao-pilpil-e1491084486535.jpg', 23, 11.5, 2, 1),
+(5, 'Espaguetis a la carbonara', 'http://sevilla.abc.es/gurme//wp-content/uploads/2009/08/670_carbonarainterior_1251742200.jpg', 60, 7.95, 3, 1),
+(6, 'Ñoquis con tomate', 'https://4.bp.blogspot.com/_KVUd709Di8s/SfXLhp-2uLI/AAAAAAAABOw/EsEqmOfs5xE/s400/%C3%91oquis.jpg', 33, 6.5, 3, 1),
+(7, 'Arroz tres delicias', 'https://unareceta.com/wp-content/uploads/2016/10/arroz-tres-delicias.jpg', 94, 4.95, 4, 1),
+(8, 'Arroz al horno', 'https://i.ytimg.com/vi/5tKKQxlLnRY/maxresdefault.jpg', 88, 4.95, 4, 1),
+(9, 'Ensalada cesar', 'https://lacocinadefrabisa.lavozdegalicia.es/wp-content/uploads/2016/04/ensalada-cesar.jpg', 22, 8.95, 5, 1),
+(10, 'Ensalada mediterranea', 'https://img-global.cpcdn.com/002_recipes/recipes_16759_v1393347074_receta_foto_00016759/400x400cq70/photo.jpg', 19, 6.95, 5, 1);
 
 -- --------------------------------------------------------
 
