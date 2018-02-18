@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 14-02-2018 a las 07:47:49
+-- Tiempo de generación: 18-02-2018 a las 09:14:13
 -- Versión del servidor: 5.6.36
 -- Versión de PHP: 5.6.31
 
@@ -66,7 +66,7 @@ CREATE TABLE `lineapedido` (
 --
 
 INSERT INTO `lineapedido` (`id`, `cantidad`, `importe`, `id_pedido`, `id_plato`) VALUES
-(1, 12, 19.5, 1, 1),
+(1, 3, 19.5, 1, 1),
 (2, 2, 9.9, 2, 8);
 
 -- --------------------------------------------------------
@@ -132,6 +132,7 @@ CREATE TABLE `ticket` (
   `id` int(11) NOT NULL,
   `fecha_ticket` datetime NOT NULL,
   `iva` int(11) DEFAULT NULL,
+  `importe` double NOT NULL,
   `descripcion` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `id_pedido` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -140,9 +141,9 @@ CREATE TABLE `ticket` (
 -- Volcado de datos para la tabla `ticket`
 --
 
-INSERT INTO `ticket` (`id`, `fecha_ticket`, `iva`, `descripcion`, `id_pedido`) VALUES
-(1, '2018-02-05 00:00:00', 21, 'Alta de pedido', 1),
-(2, '2018-02-13 18:24:00', 21, 'Dos raciones ', 2);
+INSERT INTO `ticket` (`id`, `fecha_ticket`, `iva`, `importe`, `descripcion`, `id_pedido`) VALUES
+(1, '2018-02-05 00:00:00', 21, 19.5, 'Tres hamburguesas de pollo', 1),
+(2, '2018-02-13 00:00:00', 21, 9.9, 'Dos raciones de arroz al horno', 2);
 
 -- --------------------------------------------------------
 
