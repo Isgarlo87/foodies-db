@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 18-02-2018 a las 09:14:13
+-- Tiempo de generación: 30-04-2018 a las 08:38:39
 -- Versión del servidor: 5.6.36
 -- Versión de PHP: 5.6.31
 
@@ -67,7 +67,20 @@ CREATE TABLE `lineapedido` (
 
 INSERT INTO `lineapedido` (`id`, `cantidad`, `importe`, `id_pedido`, `id_plato`) VALUES
 (1, 3, 19.5, 1, 1),
-(2, 2, 9.9, 2, 8);
+(2, 2, 9.9, 2, 8),
+(3, 3, 19.5, 3, 1),
+(4, 5, 32.5, 4, 1),
+(5, 3, 19.5, 5, 6),
+(6, 2, 17.9, 6, 9),
+(7, 1, 6.95, 7, 10),
+(8, 2, 23, 8, 4),
+(9, 1, 6.95, 9, 10),
+(10, 1, 4.95, 10, 8),
+(11, 1, 11.5, 11, 4),
+(12, 1, 6.95, 12, 10),
+(13, 2, 13, 13, 1),
+(14, 3, 32.849999999999994, 14, 2),
+(15, 1, 6.5, 15, 1);
 
 -- --------------------------------------------------------
 
@@ -88,7 +101,20 @@ CREATE TABLE `pedido` (
 
 INSERT INTO `pedido` (`id`, `fecha_pedido`, `id_tienda`, `id_usuario`) VALUES
 (1, '2018-02-05 14:23:00', 1, 16),
-(2, '2018-02-13 07:13:00', 3, 19);
+(2, '2018-02-13 07:13:00', 3, 19),
+(3, '2018-04-09 22:00:00', 3, 19),
+(4, '2018-04-15 19:43:00', 1, 16),
+(5, '2018-04-15 19:45:00', 1, 16),
+(6, '2018-04-15 19:47:00', 3, 19),
+(7, '2018-04-15 19:50:00', 3, 19),
+(8, '2018-04-15 19:51:00', 3, 19),
+(9, '2018-04-15 19:56:00', 1, 16),
+(10, '2018-04-15 20:05:00', 1, 16),
+(11, '2018-04-29 17:40:00', 1, 16),
+(12, '2018-04-29 17:51:00', 3, 19),
+(13, '2018-04-29 17:55:00', 3, 19),
+(14, '2018-04-29 18:03:00', 3, 19),
+(15, '2018-04-29 18:25:00', 1, 16);
 
 -- --------------------------------------------------------
 
@@ -111,16 +137,16 @@ CREATE TABLE `plato` (
 --
 
 INSERT INTO `plato` (`id`, `descripcion`, `imagen`, `existencias`, `precio`, `id_tipoplato`, `id_extras`) VALUES
-(1, 'Hamburguesa de pollo', 'http://www.onlinepersonaltrainer.es/wp-content/uploads/2014/11/Hamburguesas-de-pollo.jpg', 50, 6.5, 1, 1),
-(2, 'Filete de ternera', 'https://img.recetascomidas.com/recetas/640_480/filete-de-ternera-a-la-parrilla.jpg', 35, 10.95, 1, 1),
+(1, 'Hamburguesa de pollo', 'http://www.onlinepersonaltrainer.es/wp-content/uploads/2014/11/Hamburguesas-de-pollo.jpg', 47, 6.5, 1, 1),
+(2, 'Filete de ternera', 'https://img.recetascomidas.com/recetas/640_480/filete-de-ternera-a-la-parrilla.jpg', 32, 10.95, 1, 1),
 (3, 'Salmón ahumado', 'https://www.recetin.com/wp-content/uploads/2011/01/salmon-ahumado.jpg', 20, 12.95, 2, 1),
-(4, 'Bacalao al pilpil', 'https://www.miscosillasdecocina.com/wp-content/uploads/2014/02/bacalao-pilpil-e1491084486535.jpg', 23, 11.5, 2, 1),
+(4, 'Bacalao al pilpil', 'https://www.miscosillasdecocina.com/wp-content/uploads/2014/02/bacalao-pilpil-e1491084486535.jpg', 25, 11.5, 2, 1),
 (5, 'Espaguetis a la carbonara', 'http://sevilla.abc.es/gurme//wp-content/uploads/2009/08/670_carbonarainterior_1251742200.jpg', 60, 7.95, 3, 1),
-(6, 'Ñoquis con tomate', 'https://upload.wikimedia.org/wikipedia/commons/a/a3/%C3%91oquis1.jpg', 33, 6.5, 3, 1),
+(6, 'Ñoquis con tomate', 'https://upload.wikimedia.org/wikipedia/commons/a/a3/%C3%91oquis1.jpg', 30, 6.5, 3, 1),
 (7, 'Arroz tres delicias', 'https://unareceta.com/wp-content/uploads/2016/10/arroz-tres-delicias.jpg', 94, 4.95, 4, 1),
-(8, 'Arroz al horno', 'https://i.ytimg.com/vi/5tKKQxlLnRY/maxresdefault.jpg', 88, 4.95, 4, 1),
-(9, 'Ensalada cesar', 'https://lacocinadefrabisa.lavozdegalicia.es/wp-content/uploads/2016/04/ensalada-cesar.jpg', 22, 8.95, 5, 1),
-(10, 'Ensalada mediterranea', 'https://img-global.cpcdn.com/002_recipes/recipes_16759_v1393347074_receta_foto_00016759/400x400cq70/photo.jpg', 19, 6.95, 5, 1);
+(8, 'Arroz al horno', 'https://i.ytimg.com/vi/5tKKQxlLnRY/maxresdefault.jpg', 87, 4.95, 4, 1),
+(9, 'Ensalada cesar', 'https://lacocinadefrabisa.lavozdegalicia.es/wp-content/uploads/2016/04/ensalada-cesar.jpg', 20, 8.95, 5, 1),
+(10, 'Ensalada mediterranea', 'https://img-global.cpcdn.com/002_recipes/recipes_16759_v1393347074_receta_foto_00016759/400x400cq70/photo.jpg', 22, 6.95, 5, 1);
 
 -- --------------------------------------------------------
 
@@ -143,7 +169,20 @@ CREATE TABLE `ticket` (
 
 INSERT INTO `ticket` (`id`, `fecha_ticket`, `iva`, `importe`, `descripcion`, `id_pedido`) VALUES
 (1, '2018-02-05 00:00:00', 21, 19.5, 'Tres hamburguesas de pollo', 1),
-(2, '2018-02-13 00:00:00', 21, 9.9, 'Dos raciones de arroz al horno', 2);
+(2, '2018-02-13 00:00:00', 21, 9.9, 'Dos raciones de arroz al horno', 2),
+(3, '2018-04-09 22:00:00', 21, 19.5, 'Hamburguesa de pollo', 3),
+(4, '2018-04-15 19:43:00', 21, 32.5, 'Hamburguesa de pollo', 4),
+(5, '2018-04-15 19:45:00', 21, 19.5, 'Ñoquis con tomate', 5),
+(6, '2018-04-15 19:47:00', 21, 17.9, 'Ensalada cesar', 6),
+(7, '2018-04-15 19:50:00', 21, 6.95, 'Ensalada mediterranea', 7),
+(8, '2018-04-15 19:51:00', 21, 23, 'Bacalao al pilpil', 8),
+(9, '2018-04-15 19:56:00', 21, 6.95, 'Ensalada mediterranea', 9),
+(10, '2018-04-15 20:05:00', 21, 4.95, 'Arroz al horno', 10),
+(11, '2018-04-29 17:40:00', 21, 11.5, 'Bacalao al pilpil', 11),
+(12, '2018-04-29 17:51:00', 21, 6.95, 'Ensalada mediterranea', 12),
+(13, '2018-04-29 17:55:00', 21, 13, 'Hamburguesa de pollo', 13),
+(14, '2018-04-29 18:03:00', 21, 32.849999999999994, 'Filete de ternera', 14),
+(15, '2018-04-29 18:25:00', 21, 6.5, 'Hamburguesa de pollo', 15);
 
 -- --------------------------------------------------------
 
@@ -339,12 +378,12 @@ ALTER TABLE `extras`
 -- AUTO_INCREMENT de la tabla `lineapedido`
 --
 ALTER TABLE `lineapedido`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 --
 -- AUTO_INCREMENT de la tabla `pedido`
 --
 ALTER TABLE `pedido`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 --
 -- AUTO_INCREMENT de la tabla `plato`
 --
@@ -354,7 +393,7 @@ ALTER TABLE `plato`
 -- AUTO_INCREMENT de la tabla `ticket`
 --
 ALTER TABLE `ticket`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 --
 -- AUTO_INCREMENT de la tabla `tienda`
 --
